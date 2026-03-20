@@ -24,7 +24,7 @@
   </a>
 
   {% if user.is_authenticated %}
-  <form method="post" action="{% url 'taxi:car-toggle-assing' car.id %}">
+  <form method="post" action="{% url 'taxi:car-toggle-assign' car.id %}">
     {% csrf_token %}
 
     {% if user in car.drivers.all %}
