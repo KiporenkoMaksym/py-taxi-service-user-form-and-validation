@@ -21,7 +21,11 @@ from .views import (
 )
 
 urlpatterns = [
-    path("", index, name="index"),
+    path(
+        "",
+        index,
+        name="index"
+    ),
     path(
         "manufacturers/",
         ManufacturerListView.as_view(),
@@ -42,13 +46,21 @@ urlpatterns = [
         ManufacturerDeleteView.as_view(),
         name="manufacturer-delete",
     ),
-    path("cars/", CarListView.as_view(), name="car-list"),
+    path(
+        "cars/",
+        CarListView.as_view(),
+        name="car-list"
+    ),
     path(
         "cars/<int:pk>/",
          CarDetailView.as_view(),
          name="car-detail"
     ),
-    path("cars/create/", CarCreateView.as_view(), name="car-create"),
+    path(
+        "cars/create/",
+        CarCreateView.as_view(),
+        name="car-create"
+    ),
     path(
         "cars/<int:pk>/update/",
          CarUpdateView.as_view(),
